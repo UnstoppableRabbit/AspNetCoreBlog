@@ -1,0 +1,7 @@
+﻿@model List<blog.Areas.admin.Models.UserT>
+    <table>
+        <tr><th>Id пользователя</th><th>Email</th><th>Роль</th><th>Никнейм</th><th>Дата регистрации</th></tr> 
+        @foreach(var i in Model) { 
+            <tr><td>@i.UserId</td><td>@i.Email</td><td>@i.Role</td><td>@i.Nickname</td><td>@i.RegistrationDate</td></tr>
+         }
+    </table>
