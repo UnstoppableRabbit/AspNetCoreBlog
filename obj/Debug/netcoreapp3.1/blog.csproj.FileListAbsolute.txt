@@ -73,3 +73,9 @@ C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\blog.pdb
 C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\blog.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Areas\admin\Views\Home\Users.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Areas\admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Areas\admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Areas\admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\ASUS\source\repos\blog\blog\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
