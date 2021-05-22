@@ -21,6 +21,7 @@ namespace blog
         {
             services.AddDbContext<BlogDBContext>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IPostRepository, PostRepository>();
             services.AddControllersWithViews();
         }
 
