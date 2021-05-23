@@ -19,14 +19,14 @@
             <h2>Панель изменения</h2>
             <a href="#" class="btn-close closemodal" aria-hidden="true">&times;</a>
             <div class="modal-body">
-                <form>
-                    <input class="UserID" disabled="disabled" />
-                    <input class="UserMail">
-                    <input class="UserRole">
-                    <input class="UserNick">
+                <form asp-route-area="admin" asp-action="UpdateUser" asp-controller="Home" method="post">
+                    <input name="id" class="UserID" readonly="readonly"/>
+                    <input name="email" class="UserMail">
+                    <input name="role" class="UserRole">
+                    <input name="nick" class="UserNick">
                     <div class="modal-footer">
-                        <button type="submit"> Изменить</button>
-                        <button type="submit" button">Удалить</button>
+                        <button name="btnType" type="submit" value="change"> Изменить</button>
+                        <button name="btnType" type="submit" value="delete"> Удалить</button>
                     </div>
                 </form>
             </div>
@@ -35,6 +35,5 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
 <script src="~/js/update.js"></script>
 <script src="~/js/filter.js"></script>

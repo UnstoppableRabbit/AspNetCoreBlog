@@ -9,5 +9,7 @@ namespace blog.Areas.admin.Services.Abstract
     public interface IUserRepository
     {
         public Task<List<UserT>> GetUsersAsync();
+        public Task UpdateUserAsync(string id, string email, string role, string nick);
+        public Task DeleteUserAsync(string id);
     }
 }

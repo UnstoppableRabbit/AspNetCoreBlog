@@ -20,9 +20,20 @@ namespace blog.Areas.admin.Controllers
         {
             return View();
         }
+        [Route("[area]/[controller]/[action]")]
         public async Task<IActionResult> Users()
         {
             return View(await iu.GetUsersAsync());
+        }
+        [HttpPost]
+        [Route("[area]/[controller]/[action]")]
+        public async Task<IActionResult> UpdateUser(string id, string email, string role, string nick, string btnType)
+        {
+            if(btnType == "change")
+                await iu.UpdateUserAsync(id, email, role, nick);
+            else if (btnType == "delete")
+                await iu.DeleteUserAsync(id);
+            return RedirectToAction("Users", "Home", new { area = "admin" });
         }
     }
 }

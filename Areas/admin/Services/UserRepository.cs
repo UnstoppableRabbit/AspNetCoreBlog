@@ -18,7 +18,25 @@ namespace blog.Areas.admin.Services
 
         public async Task<List<UserT>> GetUsersAsync()
         {
-            return await bc.UserTs.Select(x=>x).ToListAsync();
+            return await bc.UserTs.Select(x => x).ToListAsync();
+        }
+        public async Task UpdateUserAsync(string id, string email, string role, string nick)
+        {
+            UserT user = await (from x in bc.UserTs
+                                where x.UserId.ToString() == id
+                                select x).FirstAsync();
+            user.Email = email;
+            user.Nickname = nick;
+            user.Role = role;
+            await bc.SaveChangesAsync();
+        }
+        public async Task DeleteUserAsync(string id)
+        {
+             UserT user= await (from x in bc.UserTs
+                              where x.UserId.ToString() == id
+                              select x).FirstAsync();
+             bc.UserTs.Remove(user);
+             await bc.SaveChangesAsync();
         }
     }
 }
