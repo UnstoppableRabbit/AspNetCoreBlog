@@ -1,11 +1,40 @@
 ﻿@model List<blog.Areas.admin.Models.UserT>
-    <input type="text" id="myInput" oninput="myFunction()" placeholder="Поиск по никнейму">
-    <table id="myTable">
-        <tr>
-            <th>Id пользователя</th><th>Email</th><th>Роль</th><th>Никнейм</th><th>Дата регистрации</th>
-        </tr> 
-        @foreach(var i in Model) { 
-            <tr><td>@i.UserId</td><td>@i.Email</td><td>@i.Role</td><td>@i.Nickname</td><td>@i.RegistrationDate</td></tr>
-         }
-    </table>
-    <script src="~/js/filter.js"></script>
+<input type="text" id="myInput" oninput="myFunction()" placeholder="Поиск по никнейму">
+<table id="myTable">
+    <tr>
+        <th>Id пользователя</th>
+        <th>Email</th>
+        <th>Роль</th>
+        <th>Никнейм</th>
+        <th>Дата регистрации</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr class="zxc openmodal"><td class="UID">@i.UserId</td><td class="UMail">@i.Email</td><td class="URole">@i.Role</td><td class="UNick">@i.Nickname</td><td>@i.RegistrationDate</td></tr>
+    }
+</table>
+<div class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h2>Панель изменения</h2>
+            <a href="#" class="btn-close closemodal" aria-hidden="true">&times;</a>
+            <div class="modal-body">
+                <form>
+                    <input class="UserID" disabled="disabled" />
+                    <input class="UserMail">
+                    <input class="UserRole">
+                    <input class="UserNick">
+                    <div class="modal-footer">
+                        <button type="submit"> Изменить</button>
+                        <button type="submit" button">Удалить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="~/js/update.js"></script>
+<script src="~/js/filter.js"></script>
